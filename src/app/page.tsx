@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { getContent } from "@/lib/getContent";
+import { getFeaturedProjects, type Project } from "@/lib/getProjects";
 
 export default function Home() {
     const content = getContent();
+    const featuredProjects = getFeaturedProjects();
 
     return (
         <main className="text-slate-900 min-h-screen">
@@ -19,10 +21,10 @@ export default function Home() {
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <Link
-                            href="/about"
+                            href="/projects"
                             className="px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md"
                         >
-                            Learn More
+                            View Projects
                         </Link>
                         <Link
                             href="/resume"
@@ -33,6 +35,28 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Featured Projects - Large 2-Column Visual Cards */}
+            {featuredProjects.length > 0 && (
+                <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-16 border-t border-slate-200 bg-white">
+                    <h2 className="text-2xl md:text-3xl font-bold font-display text-slate-900 mb-10">
+                        Featured Projects
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {featuredProjects.map((project) => (
+                            <FeaturedProjectCard key={project.slug} project={project} />
+                        ))}
+                    </div>
+                    <div className="mt-10">
+                        <Link
+                            href="/projects"
+                            className="text-sky-600 hover:text-sky-700 font-medium transition-colors"
+                        >
+                            View all projects →
+                        </Link>
+                    </div>
+                </section>
+            )}
 
             {/* Connect Section */}
             <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-16 border-t border-slate-200 bg-white">
@@ -54,5 +78,44 @@ export default function Home() {
                 </div>
             </section>
         </main>
+    );
+}
+
+function FeaturedProjectCard({ project }: { project: Project }) {
+    return (
+        <Link
+            href={`/projects/${project.slug}`}
+            className="group block rounded-xl border-2 border-slate-200 bg-slate-50 hover:border-sky-500/50 transition-colors overflow-hidden"
+        >
+            {/* Image Placeholder */}
+            <div className="aspect-video bg-slate-200 flex items-center justify-center border-b-2 border-slate-300">
+                <span className="text-slate-500 text-sm">[Project image/campaign visuals]</span>
+            </div>
+
+            {/* Content */}
+            <div className="p-5">
+                <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-bold text-lg text-slate-900 group-hover:text-sky-600 transition-colors">
+                        {project.title}
+                    </h3>
+                    <span className="text-xs text-slate-500 ml-2 flex-shrink-0">
+                        {project.timeline}
+                    </span>
+                </div>
+                <p className="text-slate-600 text-sm line-clamp-2 mb-3">
+                    {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 3).map((tech) => (
+                        <span
+                            key={tech}
+                            className="px-2 py-1 text-xs bg-white text-sky-600 rounded border border-sky-200"
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </Link>
     );
 }

@@ -17,7 +17,7 @@ I'm passionate about design, branding, Asian advocacy, technology, luxury cars, 
 ## About Page
 
 ### Bio
-Jack of all trades? Working on it.
+Jack of all trades? Working on it. 
 
 I'm passionate about design, branding, Asian advocacy, technology, luxury cars, and entertainment—diverse interests that I have connected through business. My love for problem-solving led me to pursue a marketing major, design & innovation minor, and an entrepreneurship certificate. With these, I get to merge creativity with strategy, much like piecing together a 1,000-piece puzzle (something I've enjoyed since childhood).
 
