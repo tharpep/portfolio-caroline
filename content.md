@@ -35,8 +35,6 @@ I'm passionate about design, branding, Asian advocacy, technology, luxury cars, 
 
 ## Resume Page
 
-### Location
-Indianapolis, Indiana, United States
 
 ### LinkedIn
 https://www.linkedin.com/in/carolinewiggins
@@ -53,7 +51,7 @@ Bachelor of Science, Marketing
 August 2024 - December 2027
 
 #### Additional Details
-Design & Innovation Minor · Entrepreneurship Certificate
+Minor: Design & Innovation · Certificate: Entrepreneurship
 
 ---
 
