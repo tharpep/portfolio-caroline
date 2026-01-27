@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { getContent } from "@/lib/getContent";
 
 export default function Home() {
+    const content = getContent();
+
     return (
         <main className="text-slate-900 min-h-screen">
             {/* Hero Section */}
@@ -10,9 +13,9 @@ export default function Home() {
                         Caroline Wiggins
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl">
-                        Jack of all trades? Working on it.
+                        {content.home.tagline}
                         <br />
-                        <span className="text-slate-700">I&apos;m passionate about design, branding, Asian advocacy, technology, luxury cars, and entertainment—diverse interests that I have connected through business.</span>
+                        <span className="text-slate-700">{content.home.introText}</span>
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <Link
@@ -38,7 +41,7 @@ export default function Home() {
                 </h2>
                 <div className="flex flex-wrap gap-4">
                     <a
-                        href="https://www.linkedin.com/in/carolinewiggins"
+                        href={content.resume.linkedIn}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-5 py-3 border-2 border-slate-300 hover:border-sky-600 text-slate-700 hover:text-sky-600 rounded-lg transition-colors"

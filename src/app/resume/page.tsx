@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getContent } from "@/lib/getContent";
 
 export const metadata: Metadata = {
     title: "Resume – Caroline Wiggins",
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function Resume() {
+    const content = getContent();
     return (
         <main className="text-slate-900 min-h-screen px-6 sm:px-8 md:px-16 lg:px-24 py-12 bg-white">
             <div className="max-w-4xl mx-auto">
@@ -14,9 +16,8 @@ export default function Resume() {
                     Caroline Wiggins
                 </h1>
                 <p className="text-slate-600 mb-8">
-                    Indianapolis, Indiana, United States ·{" "}
-                    <a href="https://www.linkedin.com/in/carolinewiggins" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-700">
-                        linkedin.com/in/carolinewiggins
+                    <a href={content.resume.linkedIn} target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-700">
+                        {content.resume.linkedIn.replace('https://www.', '').replace('https://', '')}
                     </a>
                 </p>
 
@@ -29,14 +30,14 @@ export default function Resume() {
                     </h2>
                     <div>
                         <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                            <h3 className="font-bold text-slate-900">Purdue University Daniels School of Business</h3>
-                            <span className="text-slate-600 text-sm">August 2024 - December 2027</span>
+                            <h3 className="font-bold text-slate-900">{content.resume.education.school}</h3>
+                            <span className="text-slate-600 text-sm">{content.resume.education.dateRange}</span>
                         </div>
                         <p className="text-slate-700 italic mb-2">
-                            Bachelor of Science, Marketing
+                            {content.resume.education.degree}
                         </p>
                         <p className="text-slate-600 text-sm">
-                            Design & Innovation Minor · Entrepreneurship Certificate
+                            {content.resume.education.additionalDetails}
                         </p>
                     </div>
                 </section>
@@ -47,65 +48,17 @@ export default function Resume() {
                         Experience
                     </h2>
                     <div className="space-y-6">
-                        {/* TJX Companies */}
-                        <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-slate-900">Retail Associate — The TJX Companies, Inc.</h3>
-                                <span className="text-slate-600 text-sm">January 2024 - August 2024</span>
+                        {content.resume.experience.map((exp, index) => (
+                            <div key={index}>
+                                <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                    <h3 className="font-bold text-slate-900">{exp.position} — {exp.company}</h3>
+                                    <span className="text-slate-600 text-sm">{exp.dateRange}</span>
+                                </div>
+                                <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
+                                    <li>{exp.description}</li>
+                                </ul>
                             </div>
-                            <p className="text-slate-500 text-sm mb-2">Whitestown, Indiana, United States</p>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
-                                <li>Contributed to store operations and customer experience by coordinating merchandise organization, assisting shoppers with personalized support, and leveraging inventory software to maintain accuracy and efficiency.</li>
-                            </ul>
-                        </div>
-
-                        {/* Pearson Ford */}
-                        <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-slate-900">Technician Intern — Pearson Ford</h3>
-                                <span className="text-slate-600 text-sm">March 2023 - August 2024</span>
-                            </div>
-                            <p className="text-slate-500 text-sm mb-2">Zionsville, Indiana, United States</p>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
-                                <li>Shadowed technicians in daily operations conducting multi-point inspections, car maintenance, and repairs. Accompanied technician to gather car parts, relocate cars, and close out finished projects to the service representatives.</li>
-                            </ul>
-                        </div>
-
-                        {/* Ivy Tech */}
-                        <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-slate-900">ASA President & Co-Founder — Ivy Tech Community College</h3>
-                                <span className="text-slate-600 text-sm">October 2023 - May 2024</span>
-                            </div>
-                            <p className="text-slate-500 text-sm mb-2">Indianapolis, Indiana, United States</p>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
-                                <li>Founded and led the Asian Student Alliance at Ivy Tech&apos;s downtown campus—reviving digital presence, planning cultural events, and promoting the organization to statewide groups to expand visibility and outreach.</li>
-                            </ul>
-                        </div>
-
-                        {/* Chick-fil-A Team Lead */}
-                        <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-slate-900">Team Lead — Chick-fil-A Restaurants</h3>
-                                <span className="text-slate-600 text-sm">December 2021 - October 2022</span>
-                            </div>
-                            <p className="text-slate-500 text-sm mb-2">Whitestown, Indiana, United States</p>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
-                                <li>Promoted to leadership role focused on training and onboarding new team members. Led 5+ orientations, sourced uniforms, and guided peers through Pathway training. Ensured adherence to Chick-fil-A&apos;s Core 4 principles while delivering exceptional service through the HEARD method.</li>
-                            </ul>
-                        </div>
-
-                        {/* Chick-fil-A Team Member */}
-                        <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-slate-900">Team Member — Chick-fil-A Restaurants</h3>
-                                <span className="text-slate-600 text-sm">April 2021 - December 2021</span>
-                            </div>
-                            <p className="text-slate-500 text-sm mb-2">Whitestown, Indiana, United States</p>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
-                                <li>Supported front- and back-of-house operations by preparing food, delivering orders, and maintaining a clean, welcoming environment. Practiced the HEARD method to resolve guest concerns with care, while encouraging team morale and continuously improving through training and feedback.</li>
-                            </ul>
-                        </div>
+                        ))}
                     </div>
                 </section>
 
@@ -115,9 +68,9 @@ export default function Resume() {
                         Certifications
                     </h2>
                     <div className="space-y-2">
-                        <p className="text-slate-700">Foundations of AR</p>
-                        <p className="text-slate-700">Digital Fashion Mindset</p>
-                        <p className="text-slate-700">NYU Stern Future Business Leaders Program</p>
+                        {content.resume.certifications.map((cert, index) => (
+                            <p key={index} className="text-slate-700">{cert}</p>
+                        ))}
                     </div>
                 </section>
 
@@ -127,11 +80,9 @@ export default function Resume() {
                         Honors & Awards
                     </h2>
                     <div className="space-y-2">
-                        <p className="text-slate-700">Dean&apos;s List & Semester&apos;s Honors</p>
-                        <p className="text-slate-700">John Martinson Honors College</p>
-                        <p className="text-slate-700">Equitable Excellence Scholar</p>
-                        <p className="text-slate-700">Presidential Scholar</p>
-                        <p className="text-slate-700">Alpha Lambda Delta Phi Eta Sigma</p>
+                        {content.resume.honors.map((honor, index) => (
+                            <p key={index} className="text-slate-700">{honor}</p>
+                        ))}
                     </div>
                 </section>
 
@@ -142,7 +93,7 @@ export default function Resume() {
                     </h2>
                     <div className="p-4 rounded-xl border-2 border-slate-200 bg-slate-50">
                         <p className="text-slate-700">
-                            Microsoft Word, Microsoft PowerPoint, Microsoft Excel
+                            {content.resume.topSkills}
                         </p>
                     </div>
                 </section>
