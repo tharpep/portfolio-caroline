@@ -17,7 +17,10 @@ export default function About() {
                 {/* Bio */}
                 <section className="mb-12">
                     <p className="text-lg text-slate-700 leading-relaxed">
-                        <span className="text-sky-600">[Write a short bio here - 2-3 sentences about yourself, your passion for marketing, and what drives you. Keep it personal but professional.]</span>
+                        Jack of all trades? Working on it.
+                    </p>
+                    <p className="text-lg text-slate-700 leading-relaxed mt-4">
+                        I&apos;m passionate about design, branding, Asian advocacy, technology, luxury cars, and entertainment—diverse interests that I have connected through business. My love for problem-solving led me to pursue a marketing major, design & innovation minor, and an entrepreneurship certificate. With these, I get to merge creativity with strategy, much like piecing together a 1,000-piece puzzle (something I&apos;ve enjoyed since childhood).
                     </p>
                 </section>
 
@@ -27,11 +30,11 @@ export default function About() {
                         Skills
                     </h2>
                     <div className="grid sm:grid-cols-2 gap-6">
-                        {/* Digital Marketing */}
+                        {/* Top Skills */}
                         <div className="p-5 rounded-xl border-2 border-slate-200 bg-slate-50">
-                            <h3 className="text-sky-600 font-semibold mb-3">Digital Marketing</h3>
+                            <h3 className="text-sky-600 font-semibold mb-3">Top Skills</h3>
                             <div className="flex flex-wrap gap-2">
-                                {["SEO", "SEM", "Social Media", "Email Marketing", "Content Strategy"].map((skill) => (
+                                {["Microsoft Word", "Microsoft PowerPoint", "Microsoft Excel"].map((skill) => (
                                     <span key={skill} className="px-3 py-1 text-sm bg-white text-slate-700 rounded-lg border border-slate-200">
                                         {skill}
                                     </span>
@@ -39,35 +42,11 @@ export default function About() {
                             </div>
                         </div>
 
-                        {/* Analytics & Tools */}
+                        {/* Academic Focus */}
                         <div className="p-5 rounded-xl border-2 border-slate-200 bg-slate-50">
-                            <h3 className="text-sky-600 font-semibold mb-3">Analytics & Tools</h3>
+                            <h3 className="text-sky-600 font-semibold mb-3">Academic Focus</h3>
                             <div className="flex flex-wrap gap-2">
-                                {["Google Analytics", "HubSpot", "Hootsuite", "Canva", "Adobe Creative Suite"].map((skill) => (
-                                    <span key={skill} className="px-3 py-1 text-sm bg-white text-slate-700 rounded-lg border border-slate-200">
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Brand Strategy */}
-                        <div className="p-5 rounded-xl border-2 border-slate-200 bg-slate-50">
-                            <h3 className="text-sky-600 font-semibold mb-3">Brand Strategy</h3>
-                            <div className="flex flex-wrap gap-2">
-                                {["Brand Development", "Market Research", "Consumer Insights", "Campaign Planning"].map((skill) => (
-                                    <span key={skill} className="px-3 py-1 text-sm bg-white text-slate-700 rounded-lg border border-slate-200">
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Content Creation */}
-                        <div className="p-5 rounded-xl border-2 border-slate-200 bg-slate-50">
-                            <h3 className="text-sky-600 font-semibold mb-3">Content Creation</h3>
-                            <div className="flex flex-wrap gap-2">
-                                {["Copywriting", "Graphic Design", "Video Editing", "Photography"].map((skill) => (
+                                {["Marketing", "Design & Innovation", "Entrepreneurship"].map((skill) => (
                                     <span key={skill} className="px-3 py-1 text-sm bg-white text-slate-700 rounded-lg border border-slate-200">
                                         {skill}
                                     </span>

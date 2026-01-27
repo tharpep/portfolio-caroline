@@ -14,9 +14,9 @@ export default function Resume() {
                     Caroline Wiggins
                 </h1>
                 <p className="text-slate-600 mb-8">
-                    caroline.wiggins@example.com ·{" "}
-                    <a href="https://linkedin.com/in/caroline-wiggins" className="text-sky-600 hover:text-sky-700">
-                        linkedin.com/in/caroline-wiggins
+                    Indianapolis, Indiana, United States ·{" "}
+                    <a href="https://www.linkedin.com/in/carolinewiggins" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-700">
+                        linkedin.com/in/carolinewiggins
                     </a>
                 </p>
 
@@ -29,14 +29,14 @@ export default function Resume() {
                     </h2>
                     <div>
                         <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                            <h3 className="font-bold text-slate-900">[University Name]</h3>
-                            <span className="text-slate-600 text-sm">[Date Range]</span>
+                            <h3 className="font-bold text-slate-900">Purdue University Daniels School of Business</h3>
+                            <span className="text-slate-600 text-sm">August 2024 - December 2027</span>
                         </div>
                         <p className="text-slate-700 italic mb-2">
-                            Bachelor of Science in Marketing
+                            Bachelor of Science, Marketing
                         </p>
                         <p className="text-slate-600 text-sm">
-                            <span className="text-sky-600">[Add relevant details: GPA, honors, relevant coursework, etc.]</span>
+                            Design & Innovation Minor · Entrepreneurship Certificate
                         </p>
                     </div>
                 </section>
@@ -47,44 +47,102 @@ export default function Resume() {
                         Experience
                     </h2>
                     <div className="space-y-6">
+                        {/* TJX Companies */}
                         <div>
                             <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-slate-900">[Job Title] — [Company Name]</h3>
-                                <span className="text-slate-600 text-sm">[Date Range]</span>
+                                <h3 className="font-bold text-slate-900">Retail Associate — The TJX Companies, Inc.</h3>
+                                <span className="text-slate-600 text-sm">January 2024 - August 2024</span>
                             </div>
+                            <p className="text-slate-500 text-sm mb-2">Whitestown, Indiana, United States</p>
                             <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
-                                <li><span className="text-sky-600">[Add your experience bullet points here]</span></li>
+                                <li>Contributed to store operations and customer experience by coordinating merchandise organization, assisting shoppers with personalized support, and leveraging inventory software to maintain accuracy and efficiency.</li>
+                            </ul>
+                        </div>
+
+                        {/* Pearson Ford */}
+                        <div>
+                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                <h3 className="font-bold text-slate-900">Technician Intern — Pearson Ford</h3>
+                                <span className="text-slate-600 text-sm">March 2023 - August 2024</span>
+                            </div>
+                            <p className="text-slate-500 text-sm mb-2">Zionsville, Indiana, United States</p>
+                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
+                                <li>Shadowed technicians in daily operations conducting multi-point inspections, car maintenance, and repairs. Accompanied technician to gather car parts, relocate cars, and close out finished projects to the service representatives.</li>
+                            </ul>
+                        </div>
+
+                        {/* Ivy Tech */}
+                        <div>
+                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                <h3 className="font-bold text-slate-900">ASA President & Co-Founder — Ivy Tech Community College</h3>
+                                <span className="text-slate-600 text-sm">October 2023 - May 2024</span>
+                            </div>
+                            <p className="text-slate-500 text-sm mb-2">Indianapolis, Indiana, United States</p>
+                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
+                                <li>Founded and led the Asian Student Alliance at Ivy Tech&apos;s downtown campus—reviving digital presence, planning cultural events, and promoting the organization to statewide groups to expand visibility and outreach.</li>
+                            </ul>
+                        </div>
+
+                        {/* Chick-fil-A Team Lead */}
+                        <div>
+                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                <h3 className="font-bold text-slate-900">Team Lead — Chick-fil-A Restaurants</h3>
+                                <span className="text-slate-600 text-sm">December 2021 - October 2022</span>
+                            </div>
+                            <p className="text-slate-500 text-sm mb-2">Whitestown, Indiana, United States</p>
+                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
+                                <li>Promoted to leadership role focused on training and onboarding new team members. Led 5+ orientations, sourced uniforms, and guided peers through Pathway training. Ensured adherence to Chick-fil-A&apos;s Core 4 principles while delivering exceptional service through the HEARD method.</li>
+                            </ul>
+                        </div>
+
+                        {/* Chick-fil-A Team Member */}
+                        <div>
+                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                <h3 className="font-bold text-slate-900">Team Member — Chick-fil-A Restaurants</h3>
+                                <span className="text-slate-600 text-sm">April 2021 - December 2021</span>
+                            </div>
+                            <p className="text-slate-500 text-sm mb-2">Whitestown, Indiana, United States</p>
+                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
+                                <li>Supported front- and back-of-house operations by preparing food, delivering orders, and maintaining a clean, welcoming environment. Practiced the HEARD method to resolve guest concerns with care, while encouraging team morale and continuously improving through training and feedback.</li>
                             </ul>
                         </div>
                     </div>
                 </section>
 
-                {/* Projects / Campaigns */}
+                {/* Certifications */}
                 <section className="mb-10">
                     <h2 className="text-xl font-bold font-display text-sky-600 mb-4 pb-2 border-b-2 border-sky-200">
-                        Projects & Campaigns
+                        Certifications
                     </h2>
-                    <div className="space-y-6">
-                        <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-slate-900">[Project/Campaign Name]</h3>
-                                <span className="text-slate-600 text-sm">[Date Range]</span>
-                            </div>
-                            <ul className="list-disc list-inside text-slate-700 space-y-1 ml-2">
-                                <li><span className="text-sky-600">[Add project details and results]</span></li>
-                            </ul>
-                        </div>
+                    <div className="space-y-2">
+                        <p className="text-slate-700">Foundations of AR</p>
+                        <p className="text-slate-700">Digital Fashion Mindset</p>
+                        <p className="text-slate-700">NYU Stern Future Business Leaders Program</p>
+                    </div>
+                </section>
+
+                {/* Honors & Awards */}
+                <section className="mb-10">
+                    <h2 className="text-xl font-bold font-display text-sky-600 mb-4 pb-2 border-b-2 border-sky-200">
+                        Honors & Awards
+                    </h2>
+                    <div className="space-y-2">
+                        <p className="text-slate-700">Dean&apos;s List & Semester&apos;s Honors</p>
+                        <p className="text-slate-700">John Martinson Honors College</p>
+                        <p className="text-slate-700">Equitable Excellence Scholar</p>
+                        <p className="text-slate-700">Presidential Scholar</p>
+                        <p className="text-slate-700">Alpha Lambda Delta Phi Eta Sigma</p>
                     </div>
                 </section>
 
                 {/* Skills */}
                 <section className="mb-10">
                     <h2 className="text-xl font-bold font-display text-sky-600 mb-4 pb-2 border-b-2 border-sky-200">
-                        Skills
+                        Top Skills
                     </h2>
                     <div className="p-4 rounded-xl border-2 border-slate-200 bg-slate-50">
                         <p className="text-slate-700">
-                            <span className="text-sky-600">[List key skills: Digital Marketing, SEO, Social Media Management, Google Analytics, Content Creation, Brand Strategy, etc.]</span>
+                            Microsoft Word, Microsoft PowerPoint, Microsoft Excel
                         </p>
                     </div>
                 </section>

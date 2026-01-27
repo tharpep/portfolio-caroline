@@ -16,9 +16,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-    title: "Caroline Wiggins - Marketing Professional",
-    description: "Marketing professional specializing in brand strategy, content creation, and digital marketing.",
-    keywords: ["Caroline Wiggins", "Marketing", "Brand Strategy", "Digital Marketing", "Content Creation"],
+    title: "Caroline Wiggins - Marketing | Purdue University Daniels School of Business",
+    description: "Marketing student passionate about design, branding, Asian advocacy, technology, luxury cars, and entertainment—diverse interests connected through business.",
+    keywords: ["Caroline Wiggins", "Marketing", "Purdue University", "Brand Strategy", "Design", "Entrepreneurship"],
     authors: [{ name: "Caroline Wiggins" }],
     creator: "Caroline Wiggins",
     icons: {
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        title: 'Caroline Wiggins - Marketing Professional',
-        description: 'Marketing professional specializing in brand strategy and digital marketing.',
+        title: 'Caroline Wiggins - Marketing | Purdue University Daniels School of Business',
+        description: 'Marketing student passionate about design, branding, and connecting diverse interests through business.',
     },
 };
 
