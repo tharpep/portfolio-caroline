@@ -6,6 +6,9 @@ export interface Project {
     timeline: string;
     category: string;
     status: 'completed' | 'in-progress';
+    image?: string;
+    embedCode?: string;
+    gallery?: string[];
 }
 
 export interface ProjectCategory {
@@ -16,6 +19,18 @@ export interface ProjectCategory {
 }
 
 const projects: Project[] = [
+    // Purdue Marketing Presentation (New)
+    {
+        slug: "onesync",
+        title: "OneSync: The Digital Wallet for a Shared Future",
+        description: "A comprehensive marketing strategy presentation analyzing brand positioning and consumer engagement tactics. Delivered as part of the core marketing curriculum at Purdue University.",
+        technologies: ["Microsoft PowerPoint", "Market Analysis", "Strategic Planning"],
+        timeline: "Fall 2024",
+        category: "brand-strategy",
+        status: "completed",
+        image: "/images/purdue-marketing-presentation.png",
+        embedCode: '<iframe src="https://purdue0-my.sharepoint.com/personal/cwiggin_purdue_edu/_layouts/15/Doc.aspx?sourcedoc={c20c9035-c1c2-4948-8da8-0314b097a29e}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="100%" height="400px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>',
+    },
     // Campaigns
     {
         slug: "brand-campaign-example",

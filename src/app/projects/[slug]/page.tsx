@@ -54,8 +54,8 @@ export default async function ProjectPage({ params }: PageProps) {
                 <div className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
                         <span className={`px-3 py-1 text-sm rounded-full ${project.status === 'completed'
-                                ? 'bg-green-100 text-green-700 border-2 border-green-200'
-                                : 'bg-amber-100 text-amber-700 border-2 border-amber-200'
+                            ? 'bg-green-100 text-green-700 border-2 border-green-200'
+                            : 'bg-amber-100 text-amber-700 border-2 border-amber-200'
                             }`}>
                             {project.status === 'completed' ? 'Completed' : 'In Progress'}
                         </span>
@@ -66,9 +66,25 @@ export default async function ProjectPage({ params }: PageProps) {
                     </h1>
                 </div>
 
-                {/* Image Placeholder */}
-                <div className="aspect-video bg-slate-200 rounded-xl flex items-center justify-center border-2 border-slate-300 mb-8">
-                    <span className="text-slate-500">[Add project image/campaign visuals here]</span>
+                {/* Media Section: Embed or Image */}
+                <div className="mb-8 rounded-xl overflow-hidden border-2 border-slate-200 bg-slate-50">
+                    {project.embedCode ? (
+                        <div
+                            className="aspect-video w-full [&>iframe]:w-full [&>iframe]:h-full"
+                            dangerouslySetInnerHTML={{ __html: project.embedCode }}
+                        />
+                    ) : project.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-auto object-cover"
+                        />
+                    ) : (
+                        <div className="aspect-video flex items-center justify-center bg-slate-200 text-slate-500">
+                            [Add project image/campaign visuals here]
+                        </div>
+                    )}
                 </div>
 
                 {/* Description */}
@@ -76,9 +92,6 @@ export default async function ProjectPage({ params }: PageProps) {
                     <h2 className="text-xl font-bold text-sky-600 mb-4">Overview</h2>
                     <p className="text-slate-700 leading-relaxed">
                         {project.description}
-                    </p>
-                    <p className="text-sky-600/80 mt-4 text-sm">
-                        [Add more detailed description here - what was the challenge, your approach, and results]
                     </p>
                 </section>
 
@@ -98,17 +111,24 @@ export default async function ProjectPage({ params }: PageProps) {
                 </section>
 
                 {/* Additional Images Placeholder */}
-                <section>
-                    <h2 className="text-xl font-bold text-sky-600 mb-4">Gallery</h2>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="aspect-square bg-slate-200 rounded-lg flex items-center justify-center border-2 border-slate-300">
-                            <span className="text-slate-500 text-sm text-center px-4">[Additional image]</span>
+                {/* Additional Images Gallery */}
+                {project.gallery && project.gallery.length > 0 && (
+                    <section>
+                        <h2 className="text-xl font-bold text-sky-600 mb-4">Gallery</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {project.gallery.map((img, index) => (
+                                <div key={index} className="aspect-square bg-slate-50 rounded-lg overflow-hidden border-2 border-slate-200">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={img}
+                                        alt={`${project.title} gallery image ${index + 1}`}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            ))}
                         </div>
-                        <div className="aspect-square bg-slate-200 rounded-lg flex items-center justify-center border-2 border-slate-300">
-                            <span className="text-slate-500 text-sm text-center px-4">[Additional image]</span>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                )}
             </div>
         </main>
     );

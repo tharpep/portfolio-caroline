@@ -59,9 +59,20 @@ function ProjectCard({ project }: { project: Project }) {
             href={`/projects/${project.slug}`}
             className="group block rounded-xl border-2 border-slate-200 bg-slate-50 hover:border-sky-500/50 transition-colors overflow-hidden"
         >
-            {/* Image Placeholder */}
-            <div className="aspect-video bg-slate-200 flex items-center justify-center border-b-2 border-slate-300">
-                <span className="text-slate-500 text-sm">[Project image]</span>
+            {/* Image Section */}
+            <div className="aspect-video bg-slate-200 border-b-2 border-slate-300 relative">
+                {project.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                    />
+                ) : (
+                    <div className="flex items-center justify-center w-full h-full">
+                        <span className="text-slate-500 text-sm">[Project image]</span>
+                    </div>
+                )}
             </div>
 
             {/* Content */}
