@@ -59,7 +59,6 @@ export default async function ProjectPage({ params }: PageProps) {
                             }`}>
                             {project.status === 'completed' ? 'Completed' : 'In Progress'}
                         </span>
-                        <span className="text-slate-500 text-sm">{project.timeline}</span>
                     </div>
                     <h1 className="text-3xl md:text-4xl font-bold font-display text-slate-900 mb-4">
                         {project.title}

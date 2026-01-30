@@ -10,7 +10,7 @@ Edit this file to update your portfolio. All content will automatically appear o
 Jack of all trades? Working on it.
 
 ### Intro Text
-I'm passionate about design, branding, Asian advocacy, technology, luxury cars, and entertainment—diverse interests that I have connected through business.
+I'm passionate about design, branding, Asian advocacy, technology, luxury cars, and entertainment. Diverse interests that I have connected through business.
 
 ---
 

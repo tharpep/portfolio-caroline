@@ -97,24 +97,6 @@ export default function Resume() {
                         </p>
                     </div>
                 </section>
-
-                {/* Download PDF */}
-                <div className="text-center pt-4">
-                    <a
-                        href="/Caroline_Wiggins_Resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                        </svg>
-                        Download PDF Resume
-                    </a>
-                    <p className="text-slate-500 text-sm mt-3">
-                        [Add compiled PDF to /public/Caroline_Wiggins_Resume.pdf]
-                    </p>
-                </div>
             </div>
         </main>
     );

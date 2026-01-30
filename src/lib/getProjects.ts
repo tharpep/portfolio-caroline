@@ -3,63 +3,30 @@ export interface Project {
     title: string;
     description: string;
     technologies: string[];
-    timeline: string;
-    category: string;
     status: 'completed' | 'in-progress';
     image?: string;
     embedCode?: string;
     gallery?: string[];
 }
 
-export interface ProjectCategory {
-    id: string;
-    name: string;
-    description: string;
-    projects: Project[];
-}
-
 const projects: Project[] = [
-    // Purdue Marketing Presentation (New)
     {
         slug: "onesync",
         title: "OneSync: The Digital Wallet for a Shared Future",
         description: "A comprehensive marketing strategy presentation analyzing brand positioning and consumer engagement tactics. Delivered as part of the core marketing curriculum at Purdue University.",
         technologies: ["Microsoft PowerPoint", "Market Analysis", "Strategic Planning"],
-        timeline: "Fall 2024",
-        category: "brand-strategy",
         status: "completed",
         image: "/images/purdue-marketing-presentation.png",
         embedCode: '<iframe src="https://purdue0-my.sharepoint.com/personal/cwiggin_purdue_edu/_layouts/15/Doc.aspx?sourcedoc={c20c9035-c1c2-4948-8da8-0314b097a29e}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="100%" height="400px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>',
     },
-    // Campaigns
     {
-        slug: "brand-campaign-example",
-        title: "Brand Campaign Example",
-        description: "[Add your campaign description here - describe the campaign goals, target audience, and key strategies used.]",
-        technologies: ["Social Media", "Content Strategy", "Brand Development"],
-        timeline: "[Date Range]",
-        category: "campaigns",
+        slug: "dove-strategy-case",
+        title: "Dove Strategy Case",
+        image: "/images/Screenshot 2026-01-30 000135.png",
+        description: "Dove must find a way to engage Gen Z, who demand authenticity and use brands for identity expression, without diluting the Real Beauty positioning that built trust with its existing customer base.",
+        technologies: ["Strategic Analysis", "Brand Strategy", "Presentation"],
         status: "completed",
-    },
-    // Brand Strategy
-    {
-        slug: "brand-strategy-project",
-        title: "Brand Strategy Project",
-        description: "[Add your brand strategy project description - include market research, positioning, and brand identity work.]",
-        technologies: ["Market Research", "Brand Development", "Consumer Insights"],
-        timeline: "[Date Range]",
-        category: "brand-strategy",
-        status: "completed",
-    },
-    // Content Creation
-    {
-        slug: "content-creation-project",
-        title: "Content Creation Project",
-        description: "[Add your content creation project - describe the content type, platform, and results achieved.]",
-        technologies: ["Copywriting", "Graphic Design", "Social Media"],
-        timeline: "[Date Range]",
-        category: "content",
-        status: "completed",
+        embedCode: '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSH9zQ3uIe9HZkBBrDxfv4klumjtFFu1JcZBbTyF-N8uYBVgGW8S2FkN8sq52m-DTjn1glP4J8LejXT/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
     },
 ];
 
@@ -69,31 +36,6 @@ export function getAllProjects(): Project[] {
 
 export function getProjectBySlug(slug: string): Project | undefined {
     return projects.find((p) => p.slug === slug);
-}
-
-export function getProjectsByCategory(): ProjectCategory[] {
-    const categories: ProjectCategory[] = [
-        {
-            id: "campaigns",
-            name: "Campaigns",
-            description: "Marketing campaigns and promotional initiatives.",
-            projects: projects.filter((p) => p.category === "campaigns"),
-        },
-        {
-            id: "brand-strategy",
-            name: "Brand Strategy",
-            description: "Brand development and strategic marketing work.",
-            projects: projects.filter((p) => p.category === "brand-strategy"),
-        },
-        {
-            id: "content",
-            name: "Content Creation",
-            description: "Content marketing and creative projects.",
-            projects: projects.filter((p) => p.category === "content"),
-        },
-    ];
-
-    return categories.filter((c) => c.projects.length > 0);
 }
 
 export function getFeaturedProjects(): Project[] {
