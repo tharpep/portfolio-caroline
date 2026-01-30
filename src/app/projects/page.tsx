@@ -12,7 +12,7 @@ export default function Projects() {
 
     return (
         <main className="text-slate-900 min-h-screen px-6 sm:px-8 md:px-16 lg:px-24 py-12 bg-white">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto animate-page-enter">
                 {/* Header */}
                 <div className="mb-12">
                     <h1 className="text-4xl font-bold font-display text-slate-900 mb-4">

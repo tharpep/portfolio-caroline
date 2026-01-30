@@ -7,7 +7,7 @@ export default function Home() {
     const featuredProjects = getFeaturedProjects();
 
     return (
-        <main className="text-slate-900 min-h-screen">
+        <main className="text-slate-900 min-h-screen animate-page-enter">
             {/* Hero Section */}
             <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 relative">
                 {/* Left: Hero Content */}
