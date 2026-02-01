@@ -37,7 +37,7 @@ I'm passionate about design, branding, Asian advocacy, technology, luxury cars, 
 
 
 ### LinkedIn
-https://www.linkedin.com/in/carolinewiggins
+https://www.linkedin.com/in/caroline-wiggins
 
 ### Education
 
